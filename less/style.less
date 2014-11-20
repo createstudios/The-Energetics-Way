@@ -1,0 +1,309 @@
+// There is a path to Startup framework
+
+@common-basePath: "../";
+@startup-basePath: "../../../../";
+
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+
+@import '@{common-basePath}flat-ui/less/variables.less';
+@import '@{common-basePath}flat-ui/less/mixins.less';
+
+@import '@{common-basePath}common-files/less/mixins.less';
+@import '@{common-basePath}common-files/less/common.less';
+@import '@{common-basePath}common-files/less/navbar.less';
+@import '@{common-basePath}common-files/less/helper.less';
+
+/* header */
+@import '@{startup-basePath}ui-kit/custom-kit-header/less/custom-header-1.less';
+
+/* content */
+@import '@{startup-basePath}ui-kit/custom-kit-content/less/custom-content-1.less';
+
+html {
+
+ -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+//** Theme **//
+body {
+    background-color: #f3f3f3;
+    color: #5e5f61;
+}
+
+.bs-docs-section {
+    margin-top: 20px;
+
+    li {
+        line-height: 50px;
+    }
+
+    ul li {
+        line-height: 25px;
+    }
+
+}
+
+.bs-docs-section-group {
+    background-color: #FFFFFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.35);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.35);
+    box-shadow: 0 1px 3px rgba(0,0,0,.35);
+    padding: 20px 25px 30px 25px;
+    top: 20px;
+}
+
+.bs-docs-sidebar {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.35);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.35);
+    box-shadow: 0 1px 3px rgba(0,0,0,.35);
+    //padding: 20px 10px 30px 10px;
+    //padding-top: 20px
+    @media (min-width: 768px) {
+        padding-left: 10px;
+    }
+}
+
+.bs-docs-sidenav {
+    padding-top: 5px;
+    //li {
+    //    margin-bottom: 5px;
+    //}
+}
+
+.page-contents p.lead {
+    font-size: 1.2em;
+}
+
+.page-contents {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 50px;
+}
+
+header {
+    padding-top: 35px;
+    padding-bottom: 55px;
+    &.cd-main-header {
+        -webkit-border-radius: 0 0 5px 5px;
+        -moz-border-radius: 0 0 5px 5px;
+        border-radius: 0 0 5px 5px;
+        background-color: #fff;
+        -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.35);
+        -moz-box-shadow: 0 1px 3px rgba(0,0,0,.35);
+        box-shadow: 0 1px 3px rgba(0,0,0,.35);
+
+        @media (min-width: 768px) {
+            width: 720px;
+        }
+
+        @media (min-width: 992px) {
+            width: 940px;
+        }
+
+        @media (min-width: 1200px) {
+            width: 1140px;
+        }
+    }
+}
+
+.cd-header-buttons {
+    top: 0px;
+    right: 0px;
+}
+
+
+
+.cd-logo {
+    top: 38px;
+    left: 1.7em;
+}
+
+.cd-logo img {
+    width: 300px;
+    height: 50px;
+}
+
+
+.cd-primary-nav .cd-secondary-nav, .cd-primary-nav .cd-nav-gallery, .cd-primary-nav .cd-nav-icons {
+    position: absolute;
+    top: 85px;
+    width: 1140px;
+}
+
+.cd-primary-nav, .cd-primary-nav ul {
+    right: -15px;
+}
+
+a:hover , .NewsInfo span a:hover{
+    color: @link-hover-color;
+}
+
+.cd-primary-nav > li > a {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.cd-primary-nav .cd-secondary-nav {
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.cd-primary-nav .cd-secondary-nav > li {
+    height: 200px;
+}
+
+.cd-overlay {
+    background-color: #5e5f61;
+}
+
+.back-to-top {
+    padding-bottom: 20px;
+}
+
+.cd-main-header {
+    height: 130px;
+}
+
+
+.cd-main-header ul .in a, .cd-main-header ul .tw a, .cd-main-header ul .rss a {
+    float: left;
+    background: url(../common-files/img/sprites.png);
+    width: 20px;
+    height: 20px;
+    margin: 0 4px 0 0;
+}
+
+.cd-main-header ul .in a {
+    background-position: -460px -63px;
+}
+
+.cd-main-header ul .tw a {
+    background-position: -449px -41px;
+}
+
+.cd-main-header ul .rss a {
+    background-position: -450px -10px;
+}
+
+.cd-main-header .cd-header-buttons ul li, .cd-main-header .cd-header-buttons ul li {
+    display: inline;
+    list-style-type: none;
+}
+
+.cd-search {
+    height: 120px;
+    top: 42px;
+}
+
+.cd-search-trigger::before {
+    top: 11px;
+    left: 1px;
+    width: 15px;
+    height: 15px;
+}
+
+.cd-search-trigger::after {
+    bottom: 3px;
+    right: 11px;
+}
+
+.cd-search-trigger span {
+    top: 5px;
+    left: -5px;
+}
+
+.cd-search-trigger, a.cd-search-trigger, a.cd-search-trigger:hover, .cd-nav-trigger, a.cd-nav-trigger, a.cd-nav-trigger:hover{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.cd-header-buttons {
+    top: 0px;
+    right: 10px;
+}
+
+.cd-header-buttons {
+    padding-right: 15px;
+}
+
+
+
+.cd-overlay.is-visible {
+    z-index: -1;
+}
+
+
+.cd-primary-nav {
+    position: static;
+    padding: 0 150px 0 0;
+    height: auto;
+    width: auto;
+    float: right;
+    overflow: visible;
+    background: transparent;
+}
+
+.cd-primary-nav > li > a {
+    margin-top: 20px;
+}
+
+
+.body_top_stripe {
+    height: 6px;
+    background-color: @brand-primary;
+    background-image: url(../common-files/img/body_bg_repeat.gif);
+    background-repeat: repeat-x;
+    background-position: top center;
+    z-index: 9999;
+}
+
+.value p {
+    font-family: 'PT Serif', "Times New Roman", serif;
+    font-weight: 300;
+    color: #c5c5c7;
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    top: 50px;
+}
+
+li.phase {
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 12px;
+    color: #c5c5c7;
+}
+
+.bs-docs-section {
+    .alert-info table{
+        th {
+            border-color: #31708f;
+        }
+        td {
+            border-color: rgba(49, 112, 143, 0.1);
+        }
+    }
+    .table-striped > tbody > tr:nth-child(odd) {
+        background-color: #EAF4F8;
+    }
+}
